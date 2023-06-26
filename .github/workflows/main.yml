@@ -12,12 +12,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14
-      - name: Install Yarn
-        run: npm install -g yarn
       - name: Install Dependencies
-        run: yarn install
+        run: npm install
       - name: Install Cypress
-        run: yarn add cypress --dev
+        run: npm install cypress --dev
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
